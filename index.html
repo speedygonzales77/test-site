@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Bryce's Beach Excursion Website</title>
+
+    <!-- Boostrap CDN CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+
+    <!-- Google Fonts CDN CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Google Icon CDN CSS-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <!-- FontAwesome CDN CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- FancyApp CDN CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+
+    <!-- AOS CSS CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <!-- End slick-theme.css -->
+
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div
+        class="text-center alert alert-info alert-dismissible fade show"
+        role="alert"
+      >
+        <strong>ATTENTION!</strong>
+        <p>Check our daily specials!</p>
+
+        <button
+          type="button"
+          class="btn-close"
+          data-dismiss="alert"
+          aria-label="close"
+        ></button>
+      </div>
+
+      <!-- Begin Offcanvas -->
+      <a
+        data-bs-toggle="offcanvas"
+        href="#offcanvasExample"
+        role="button"
+        aria-controls="offcanvasExample"
+      >
+      </a>
+
+      <div
+        class="offcanvas offcanvas-start"
+        tabindex="-1"
+        id="offcanvasExample"
+        aria-labelledby="offcanvasExampleLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+            Welcome, Please sign in
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <div>
+            <!-- email - email field -->
+            <div
+              class="col-12 col-xs-12 col-sm-12 col-md-12 colxl-12 col-xxl-12"
+            >
+              <label>Email:</label>
+              <input
+                type="email"
+                name="your_email"
+                id="email"
+                required
+                class="form-control"
+              />
+              <div class="invalid-feedback">
+                Email address is required. Please inupt a valid email address.
+              </div>
+            </div>
+          </div>
+
+          <!-- password - password field -->
+          <div class="col-12 col-xs-12 col-sm-12 col-md-12 colxl-12 col-xxl-12">
+            <label for="pwd">Password:</label>
+            <input
+              type="password"
+              id="pwd"
+              name="pwd"
+              required
+              class="form-control"
+            />
+            <div class="invalid-feedback">
+              Password is required. Please input a valid password.
+            </div>
+          </div>
+          <!-- submit - button -->
+          <div class="col-12 sub-btn">
+            <input
+              type="Submit"
+              name="submit"
+              value="Submit"
+              class="submit btn btn-outline-primary"
+            />
+          </div>
+        </div>
+      </div>
+      <div></div>
+      <!-- End Offcanvas -->
+
+      <!-- Begin Google Icons -->
+      <div class="container text-center top-logo">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <span class="material-symbols-outlined">
+              book_online
+            </span>
+            <span class="material-symbols-outlined">
+              <a
+                data-bs-toggle="offcanvas"
+                href="#offcanvasExample"
+                role="button"
+                aria-controls="offcanvasExample"
+              >
+                login
+              </a>
+            </span>
+          </div>
+          <div class="col-12 col-md-6">
+            <span id="my-google-font"> Bryce's Beach Excursions </span>
+          </div>
+        </div>
+      </div>
+      <!-- Google Icons End -->
+
+      <!-- Top Navbar Begins -->
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+          <button
+            class="navbar-toggler custom-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-center"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="/index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="schedule.html">Schedule</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="services.html">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Family Activities</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Rentals</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Events
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Birthday Events</a></li>
+                  <li><a class="dropdown-item" href="#">Special Events</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+              </li>-->
+            </ul>
+            <!-- <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form> -->
+          </div>
+        </div>
+      </nav>
+      <!-- Top Navbar Ends -->
+    </header>
+    <main>
+      <!-- Carousel Begins -->
+      <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="/images/carousel/carousel-1.jpg"
+              class="d-block w-100"
+              alt="Beach resort"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Beach Resort</h5>
+              <p>
+                Picture of a Beach Resort.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="/images/carousel/carousel-2.jpg"
+              class="d-block w-100"
+              alt="Man Surfing"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Man Surfing</h5>
+              <p>
+                A man on a surfboard in the water.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="/images/carousel/carousel-3.jpg"
+              class="d-block w-100"
+              alt="Sunset on a Beach"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Beach at night</h5>
+              <p>
+                Woman swinging on a beach during sunset.
+              </p>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- Carousel Ends -->
+
+      <!-- Font Awesome Icons -->
+      <div class="container-fluid text-center fa-row">
+        <div class="row">
+          <div
+            class="col-6 col-xs-6 col-sm-6 col-md-4 col-lg-2 col-xl-2 col-xxl-2"
+          >
+            <a href="form.html">
+              <i class="fa-regular fa-rectangle-list fa-row-icon"></i>
+              <br />Reservations</a
+            >
+          </div>
+          <div
+            class="col-6 col-xs-6 col-sm-6 col-md-4 col-lg-2 col-xl-2 col-xxl-2"
+          >
+            <a href="#">
+              <i class="fa-regular fa-moon fa-row-icon"></i>
+              <br />Evening</a
+            >
+          </div>
+          <div
+            class="col-6 col-xs-6 col-sm-6 col-md-4 col-lg-2 col-xl-2 col-xxl-2"
+          >
+            <a href="#">
+              <i class="fa-regular fa-user fa-row-icon"></i>
+              <br />User</a
+            >
+          </div>
+          <div
+            class="col-6 col-xs-6 col-sm-6 col-md-4 col-lg-2 col-xl-2 col-xxl-2"
+          >
+            <a href="#">
+              <i class="fa-solid fa-phone fa-row-icon"></i>
+              <br />Call</a
+            >
+          </div>
+          <div
+            class="col-6 col-xs-6 col-sm-6 col-md-4 col-lg-2 col-xl-2 col-xxl-2"
+          >
+            <a href="#">
+              <i class="fa-regular fa-comment fa-row-icon"></i>
+              <br />Contact</a
+            >
+          </div>
+          <div
+            class="col-6 col-xs-6 col-sm-6 col-md-4 col-lg-2 col-xl-2 col-xxl-2"
+          >
+            <a href="#">
+              <i class="fa-regular fa-envelope fa-row-icon"></i>
+              <br />Email</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Begin first paragraph section -->
+      <div class="container first-paragraph-div" my-text>
+        <div class="row">
+          <div class="col-12">
+            <img
+              src="/images/square/paragraph-1.jpg"
+              alt="Girl going to Surf"
+              class="img-responsive first-paragraph-img"
+            />
+            <h2>First Paragraph Title</h2>
+            <p>
+              Meet Mia, the seasoned surfer who has become a familiar face at
+              our beaches. With her sun-bleached hair and a perpetual tan, Mia
+              exudes the essence of a true beach lover. Her passion for surfing
+              is palpable as she fearlessly takes on the waves day after day,
+              effortlessly riding them like an artist dancing on canvas. But
+              it's not just her surfing prowess that makes her stand out. Mia's
+              warm and welcoming nature has turned her into a beloved figure
+              among the beach community. Whether it's sharing surf tips with
+              newcomers or organizing impromptu beach bonfires, Mia's presence
+              adds a sense of camaraderie and joy to our seaside haven.
+            </p>
+            <p>
+              Beyond surfing, Mia is also an advocate for ocean conservation.
+              She's been part of numerous beach clean-up initiatives and
+              supports local organizations that strive to protect marine life
+              and preserve the coastal ecosystem. She believes that surfers have
+              a unique responsibility to protect the environment that brings
+              them so much joy and serenity.
+            </p>
+            <p>
+              Whether it's the thrill of riding the perfect wave, the mellowness
+              of beachside melodies, or the warmth of a tightly-knit beach
+              family, Mia embraces every aspect of the beach with unbridled
+              passion and love, leaving an indelible mark on all those fortunate
+              enough to share in her coastal journey.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- End first paragraph section -->
+
+      <!-- Slick Slider -->
+      <div class="container-fluid slider-container">
+        <div class="row">
+          <div class="col-12">
+            <div class="main-slider">
+              <div
+                class="slider slider-for"
+                data-slick='{"slidesToShow": 5, "slidesToScroll": 5}'
+              >
+                <div class="cuadro">
+                  <a
+                    href="/images/square-carousel/photos/1.jpg"
+                    data-fancybox="gallery"
+                    data-caption="Single image"
+                  >
+                    <img
+                      src="/images/square-carousel/thumbs/1.jpg"
+                      class="img-fluid img-responsive"
+                    />
+                  </a>
+                </div>
+                <div class="cuadro">
+                  <a
+                    href="/images/square-carousel/photos/2.jpg"
+                    data-fancybox="gallery"
+                    data-caption="Single image"
+                  >
+                    <img
+                      src="/images/square-carousel/thumbs/2.jpg"
+                      class="img-fluid img-responsive"
+                    />
+                  </a>
+                </div>
+                <div class="cuadro">
+                  <a
+                    href="/images/square-carousel/photos/3.jpg"
+                    data-fancybox="gallery"
+                    data-caption="Single image"
+                  >
+                    <img
+                      src="/images/square-carousel/thumbs/3.jpg"
+                      class="img-fluid img-responsive"
+                    />
+                  </a>
+                </div>
+                <div class="cuadro">
+                  <a
+                    href="/images/square-carousel/photos/4.jpg"
+                    data-fancybox="gallery"
+                    data-caption="Single image"
+                  >
+                    <img
+                      src="/images/square-carousel/thumbs/4.jpg"
+                      class="img-fluid img-responsive"
+                    />
+                  </a>
+                </div>
+                <div class="cuadro">
+                  <a
+                    href="/images/square-carousel/photos/5.jpg"
+                    data-fancybox="gallery"
+                    data-caption="Single image"
+                  >
+                    <img
+                      src="/images/square-carousel/thumbs/5.jpg"
+                      class="img-fluid img-responsive"
+                    />
+                  </a>
+                </div>
+                <div class="cuadro">
+                  <a
+                    href="/images/square-carousel/photos/6.jpg"
+                    data-fancybox="gallery"
+                    data-caption="Single image"
+                  >
+                    <img
+                      src="/images/square-carousel/thumbs/6.jpg"
+                      class="img-fluid img-responsive"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Slick Slider -->
+
+      <!-- Begin second paragraph section -->
+      <div class="container second-paragraph-div" my-text>
+        <div class="row">
+          <div class="col-12">
+            <img
+              src="/images/square/paragraph-2.jpg"
+              alt="Lookout Spot at Beach"
+              class="img-responsive second-paragraph-img"
+            />
+            <h2>Second Paragraph Title</h2>
+            <p>
+              Our recent trip to the beach resort was nothing short of magical!
+              From the moment we stepped foot onto the pristine sandy shores, we
+              knew we were in for an incredible vacation. The resort's
+              breathtaking oceanfront location provided the perfect backdrop for
+              a relaxing and romantic getaway. The staff warmly welcomed us, and
+              their hospitality throughout our stay was exceptional, making us
+              feel pampered and cared for at every turn.
+            </p>
+            <p>
+              The resort's amenities left us spoiled for choice. We spent our
+              days lounging by the pool, sipping refreshing cocktails, and
+              soaking up the sun. The beach activities were a thrill - from
+              snorkeling among colorful marine life to adventurous jet-ski
+              rides, there was never a dull moment. Evenings were a delight, as
+              we enjoyed sumptuous dinners at the resort's seaside restaurant,
+              accompanied by the serene sound of waves crashing nearby.
+            </p>
+            <p>
+              The highlight of our trip, however, was witnessing the
+              breathtaking sunsets from our balcony each evening. The romantic
+              ambiance created the perfect setting for us to reconnect and
+              create cherished memories together. Without a doubt, our time at
+              the beach resort was an unforgettable experience, and we can't
+              wait to return to relive this blissful escape to paradise. Highly
+              recommended for couples seeking a dreamy and rejuvenating retreat!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- End second paragraph section -->
+
+      <!-- Begin headshot section-->
+      <div class="container headshot text-center">
+        <div class="row">
+          <div
+            class="col-12 col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 -xxl-4"
+          >
+            <img
+              src="/images/square/person-1.jpg"
+              alt="Lady Standing on Rocks"
+              class="cropped"
+              data-aos="zoom-in"
+            />
+            <br />
+            <blockquote>
+              "The beach washed away my worries and filled my soul with joy as
+              golden sand embraced my toes, salty breeze kissed my cheeks, and
+              the endless waves whispered serenity into my heart."
+              <cite>-Evelina Sterling</cite>
+            </blockquote>
+          </div>
+
+          <div
+            class="col-12 col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 -xxl-4"
+          >
+            <img
+              src="/images/square/person-2.jpg"
+              alt="Lady Sitting on a Beach"
+              class="cropped"
+              data-aos="zoom-in"
+            />
+            <br />
+            <blockquote>
+              "Lost in the embrace of the sun's gentle rays, I found solace on
+              the sandy shores. With each breath, I felt my worries melt away,
+              replaced by a sense of pure bliss."
+              <cite>-Ava Summers</cite>
+            </blockquote>
+          </div>
+
+          <div
+            class="col-12 col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 -xxl-4"
+          >
+            <img
+              src="/images/square/person-3.jpg"
+              alt="Joey and Dog Playing in the sand"
+              class="cropped"
+              data-aos="zoom-in"
+            />
+            <br />
+            <blockquote>
+              "Watching my son's laughter fill the air as he built sandcastles,
+              and seeing our furry friend chase the waves with pure delight,
+              reminded me of the simple joys in life."
+              <cite>-Evan Mercer</cite>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+      <!-- End headshot section-->
+    </main>
+    <footer>
+      <!-- Begin footer -->
+      <div class="container-fluid text-center footer-row">
+        <div class="row">
+          <div class="col">
+            <a href="#">Footer Item One</a>
+          </div>
+
+          <div class="col">
+            <a href="#">Footer Item Two</a>
+          </div>
+
+          <div class="col">
+            <a href="#">Footer Item Three</a>
+          </div>
+
+          <div class="col">
+            <a href="#">Footer Item Four</a>
+          </div>
+
+          <div class="col">
+            <a href="#">Footer Item Five</a>
+          </div>
+
+          <div class="col">
+            <a href="#">Footer Item Six</a>
+          </div>
+        </div>
+        <hr />
+        <div class="row">
+          <div class="col-12">
+            <a href="https://facebook.com" target="blank">
+              <i class="fa-brands fa-facebook fa-social-media"></i>
+            </a>
+            <a href="https://instagram.com" target="blank">
+              <i class="fa-brands fa-instagram fa-social-media"></i>
+            </a>
+            <a href="https://youtube.com" target="blank">
+              <i class="fa-brands fa-youtube fa-social-media"></i>
+            </a>
+            <a href="https://tiktok.com" target="blank">
+              <i class="fa-brands fa-tiktok fa-social-media"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- End footer -->
+    </footer>
+
+    <!-- Begin JS Section -->
+    <section>
+      <!--  jQuery CDN -->
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      ></script>
+
+      <!-- Boostrap JS CDN -->
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"
+      ></script>
+
+      <!-- FancyApp CDN JS -->
+      <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+      <script>
+        Fancybox.bind('[data-fancybox="gallery"]', {
+          //
+        });
+      </script>
+
+      <!-- AOS JS CDN-->
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+        AOS.init();
+      </script>
+
+      <!-- Isotope JS CDN -->
+      <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+      <!-- Isotope JS CDN -->
+
+      <!-- Begin Slick Slider-->
+      <script
+        type="text/javascript"
+        src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+      ></script>
+      <!-- End Slick Slider -->
+
+      <!-- Local Javascript -->
+      <script src="/js/scripts.js"></script>
+    </section>
+
+    <!-- End JS Section -->
+  </body>
+</html>
